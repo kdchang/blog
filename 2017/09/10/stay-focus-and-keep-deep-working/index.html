@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="記錄一個軟體工程師也是一位創業者/教育者/作者對教育學習、媒體出版、產品設計、創新創業、經營管理、政治經濟與職場人生的思考與觀察">
+    <meta name="keyword"  content="教育學習, 媒體出版, 產品設計, 創新創業, 經營管理, 政治經濟, 職場人生, 軟體工程師">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <meta name="google-site-verification" content="cMTgiEFMM7gXpRMBbu_05Lnj0scwhDPCMvpfhQOpENI" />
+
+    <title>
+        
+          在注意力稀缺的時代重新找回深度工作力（Deep Work） - KD Chang
+        
+    </title>
+
+    <link rel="canonical" href="https://blog.kdchang.cc/2017/09/10/stay-focus-and-keep-deep-working/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- og tag -->
+    <meta name="generator" content="KD Chang">
+    
+      <meta name="og:title" content="在注意力稀缺的時代重新找回深度工作力（Deep Work） - KD Chang">
+      <meta name="og:site_name" content="在注意力稀缺的時代重新找回深度工作力（Deep Work） - KD Chang">
+    
+    <meta name="og:description" content="記錄一個軟體工程師也是一位創業者/教育者/作者對教育學習、媒體出版、產品設計、創新創業、經營管理、政治經濟與職場人生的思考與觀察">
+
+    <meta name="og:image" content="/img/favicon.ico">
+    <meta name="og:type" content="website">
+    <!--Twitter Graph-->
+    <meta name="twitter:card" content="summary" />
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">KD Chang</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    <li>
+                        <a href="/atom.xml">RSS</a>
+                    </li>                 
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/cover.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+
+                    <h1>在注意力稀缺的時代重新找回深度工作力（Deep Work）</h1>
+                    <span class="meta">
+                        Posted by kdchang on
+                        2017-09-10
+                    </span>
+                    <br>
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#財務" title="財務">財務</a>
+                        
+                          <a class="tag" href="/tags/#職場" title="職場">職場</a>
+                        
+                          <a class="tag" href="/tags/#商業管理" title="商業管理">商業管理</a>
+                        
+                          <a class="tag" href="/tags/#人生" title="人生">人生</a>
+                        
+                          <a class="tag" href="/tags/#溝通" title="溝通">溝通</a>
+                        
+                          <a class="tag" href="/tags/#專注力" title="專注力">專注力</a>
+                        
+                          <a class="tag" href="/tags/#focus" title="focus">focus</a>
+                        
+                          <a class="tag" href="/tags/#deep work" title="deep work">deep work</a>
+                        
+                          <a class="tag" href="/tags/#深度工作力" title="深度工作力">深度工作力</a>
+                        
+                          <a class="tag" href="/tags/#工作力" title="工作力">工作力</a>
+                        
+                          <a class="tag" href="/tags/#career" title="career">career</a>
+                        
+                          <a class="tag" href="/tags/#work" title="work">work</a>
+                        
+                          <a class="tag" href="/tags/#生產力工具" title="生產力工具">生產力工具</a>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+                <br>
+                <div>
+                    <div class="fb-like" data-href="https://www.facebook.com/kdchang.cc" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                </div>
+                <br>
+                <div>
+                    <p><img src="deep-work.jpg" alt="在注意力稀缺的時代重新找回深度工作力"></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>隨著網際網路和科技產品的發展，人們除了時間外，注意力、專注力和深度工作力也成為十分稀缺的資產。現代人號稱一天工作八小時甚至更長，但我們往往在開會、被打斷、逛網站、滑手機、處理私人事務和在茶水間討論公司組織裡的八卦中切換我們的思緒，實際上真正有生產力和進入心流專注狀態可能不過幾個小時。</p>
+<p>或許是希望在日常工作之餘多一點自我時間，在生活瑣事襲來時能保有自我的追求，我很喜歡閱讀各類型有關提高工作生產力和自我學習的書籍並在生活中實踐。最近看的這本由 Cal Newport 撰寫的 <a href="https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692" target="_blank" rel="noopener">Deep Work: Rules for Focused Success in a Distracted World Hardcover</a>（<a href="http://www.books.com.tw/products/0010758381" target="_blank" rel="noopener">中文書名：深度工作力</a>）討論了最近幾年在工作生產力書籍中時常被談到的議題：專注力和工作效率，並明確定義了深度工作力和淺薄工作力的區別。書中沒有複雜的理論，取而代之的是淺顯的範例和建議，蠻適合希望在競爭激烈的知識經濟時代保有核心工作力的朋友當做入門的概論書來看。</p>
+<h1 id="在新經濟社會需要具備的深度工作力"><a href="#在新經濟社會需要具備的深度工作力" class="headerlink" title="在新經濟社會需要具備的深度工作力"></a>在新經濟社會需要具備的深度工作力</h1><p>本書一開始定義了什麼是<code>深度工作</code>，什麼是<code>淺薄工作</code>。所謂的深度工作是在一段充分專注的情況下所從事的職業活動。在深度工作的狀態下你可以將你的認知能力發揮到極限，進而改善並學習困難的專業技術，創造新的價值並建立他人難以模仿的專業能力和思考洞察。相對而言，淺薄工作主要是不需要高認知需求，偏向回覆性、協調性工作，通常不太需要太多專注力就可以執行，通常這類型工作創造價值有限，且容易被模仿。</p>
+<p>當然書中也提到了一些比較特別的例子，包括身兼 Twitter 執行長和 Squard CEO 的 Jack Dorsey，工作上確實花很多時間在做淺薄工作，例如：擔任主管開各種會議、不斷被打斷、收發 Email 等。然而這類主管、業務員和網路行銷企劃人員隨時保持社會連線是很重要的事情，因為這些淺薄工作就是驅動他們工作的重要因子。</p>
+<p>儘管如此，若能在這類工作中適度的融入深度工作或許也有機會發揮意想不到的成果，例如：微軟共同創辦人 Bill Gates 就以一年兩次的沉思週而聞名。在沉思期間他會離群索居於湖濱小屋中思考未來的趨勢發展，也是在沉思期間 Gates 寫下來網際網路浪潮的備忘錄，將注意力轉往當時才剛發展不久的全球第一個商用瀏覽器 Netscape（網景），進而揭開了第一次瀏覽器大戰。</p>
+<h1 id="在注意力稀缺的時代重新找回深度工作力"><a href="#在注意力稀缺的時代重新找回深度工作力" class="headerlink" title="在注意力稀缺的時代重新找回深度工作力"></a>在注意力稀缺的時代重新找回深度工作力</h1><p>對於一般沒有初始化繼承衣缽的經濟資本的人來說，透過深度工作力的培養是達成職涯目標的一個可以嘗試的方式。尤其在世界公民的時代，現在是人類歷史上工作力流動最頻繁的年代，擁有無可取代的技術和專業能力的超級明星比起從前任何時候所能發揮的影響力更大更深遠。</p>
+<p>讀到這裡，如果你認同深度工作力，在這邊我融合了書中一些方法建議和我個人的經驗整理和大家分享，也歡迎讀者們補充：</p>
+<h3 id="1-忙碌不代表有生產力，很有可能是瞎忙，具體量化做的工作內容"><a href="#1-忙碌不代表有生產力，很有可能是瞎忙，具體量化做的工作內容" class="headerlink" title="1. 忙碌不代表有生產力，很有可能是瞎忙，具體量化做的工作內容"></a>1. 忙碌不代表有生產力，很有可能是瞎忙，具體量化做的工作內容</h3><p>這邊推薦使用 <a href="http://wiki.mbalib.com/zh-tw/OKR" target="_blank" rel="noopener">Objectives and Key Results，OKR</a> 來定義一年和每季需要完成的目標並使用 <a href="http://blog.idonethis.com/google-snippets-internal-tool/" target="_blank" rel="noopener">Google Snippets template</a>（感謝一位朋友推薦使用）追蹤記錄每天的工作內容。另外，雖不用到古人吾日三省吾身的狀態，但可以參考 <a href="https://zh.wikipedia.org/zh-tw/Scrum" target="_blank" rel="noopener">Scrum</a> 敏捷開發方法中的 Stand up meeting 每天自問自己昨天做了什麼，今天打算做什麼，有沒有遇到哪些困難。</p>
+<p><img src="snippet.png" alt="在注意力稀缺的時代重新找回深度工作力"></p>
+<h3 id="2-記錄自己一天中什麼時間最有生產力並定期檢討，找到適合自己工作和生活的節奏"><a href="#2-記錄自己一天中什麼時間最有生產力並定期檢討，找到適合自己工作和生活的節奏" class="headerlink" title="2. 記錄自己一天中什麼時間最有生產力並定期檢討，找到適合自己工作和生活的節奏"></a>2. 記錄自己一天中什麼時間最有生產力並定期檢討，找到適合自己工作和生活的節奏</h3><p>在記錄完自己一到兩週的工作內容後，便可以利用這些 data 進行資料分析，找到自己最具生產力的時段。有的人習慣早上工作，像我一般習慣在一大早起來頭腦清楚時進行思考和需要專注度的工作，而有的人習慣在深夜夜深人靜時工作，沒什麼對錯，就是充分了解自己就好。</p>
+<h3 id="3-練習斷網一天，放天無網路假，不用手機和電腦，從中篩選合適自己的使用方式"><a href="#3-練習斷網一天，放天無網路假，不用手機和電腦，從中篩選合適自己的使用方式" class="headerlink" title="3. 練習斷網一天，放天無網路假，不用手機和電腦，從中篩選合適自己的使用方式"></a>3. 練習斷網一天，放天無網路假，不用手機和電腦，從中篩選合適自己的使用方式</h3><p>拜智慧型手機所賜，現代人使用網路的時間遠遠大於過去，然而我們常常在使用網路過程中有意無意浪費了許多寶貴時間和專注力。建議可以從中篩選合適自己的社群網站和媒體以及使用方式。</p>
+<h3 id="4-定義自己回覆訊息和電子郵件的方法和原則"><a href="#4-定義自己回覆訊息和電子郵件的方法和原則" class="headerlink" title="4. 定義自己回覆訊息和電子郵件的方法和原則"></a>4. 定義自己回覆訊息和電子郵件的方法和原則</h3><p>現在人上網很多時間是在回覆訊息和電子郵件，有些工作者每天甚至被數百封電子郵件給淹沒。若能掌握幾個原則則有機會可以提高自己的工作效率：例如：公告了自己的電子信箱同時就明確定義發信的範本和收信規則讓發信過來的人可以具體化自己的問題，一方面也篩選掉了沒有準備好的聯絡者。定義好收信、回信時間和回信規則，不需要時時刻刻 context switch 去收發電子信箱。</p>
+<h3 id="5-打造屬於自己的工作環境和工作儀式"><a href="#5-打造屬於自己的工作環境和工作儀式" class="headerlink" title="5. 打造屬於自己的工作環境和工作儀式"></a>5. 打造屬於自己的工作環境和工作儀式</h3><p>人會因為服裝和環境而改變自己的行為，建立起自己的高效率工作環境和工作儀式，例如有的人喜歡在咖啡廳工作，在來杯拿鐵咖啡或是聽一首熟悉的歌後開啟自己的工作模式，所以找到自己的那杯咖啡吧！</p>
+<h3 id="6-不斷累積相關知識和技巧，成為擁有具有深度工作力和快速學習能力的專業工作者"><a href="#6-不斷累積相關知識和技巧，成為擁有具有深度工作力和快速學習能力的專業工作者" class="headerlink" title="6. 不斷累積相關知識和技巧，成為擁有具有深度工作力和快速學習能力的專業工作者"></a>6. 不斷累積相關知識和技巧，成為擁有具有深度工作力和快速學習能力的專業工作者</h3><p>隨著科技的指數性成長，各種科技工具推陳出新（例如：追蹤上網時間的 <a href="https://toggl.com/" target="_blank" rel="noopener">toggl</a>、todo 工具：<a href="https://pomotodo.com/" target="_blank" rel="noopener">番茄土豆</a>、<a href="https://zhtw.todoist.com/" target="_blank" rel="noopener">todoist</a>），如何善用不同的工作技巧和生產力工具並培養自己快速學習各種跨領域技術的能力將可以讓自己持續保有專業活力。</p>
+<h3 id="7-定期運動、規律飲食和作息，保持身心靈健康"><a href="#7-定期運動、規律飲食和作息，保持身心靈健康" class="headerlink" title="7. 定期運動、規律飲食和作息，保持身心靈健康"></a>7. 定期運動、規律飲食和作息，保持身心靈健康</h3><p>雖然是老生常談，但定期運動、規律飲食和作息可以讓自己在忙碌的工作中儲備好能力，迎接生活中的每一個挑戰！</p>
+<p><img src="book.jpg" alt="在注意力稀缺的時代重新找回深度工作力"></p>
+<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><p>以上分享了幾個我覺得蠻實用的工作生產力技巧和深度工作力這本書的一些讀後心得，在這個專注力稀缺的年代，注意力和深度工作力是除了時間外珍貴的稀缺資源。把握幾個核心原則並刻意練習，相信你也可以在注意力稀缺的時代重新找回深度工作力，也歡迎讀者若有覺得不錯的提高工作生產力技巧補充分享！</p>
+<h1 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h1><ol>
+<li><a href="http://blog.idonethis.com/silicon-valleys-productivity-secret/" target="_blank" rel="noopener">Silicon Valley’s Productivity Secret</a></li>
+<li><a href="http://dannyimages.com/2012/06/05/2106-smart-working-with-snippets/" target="_blank" rel="noopener">敏捷工作術(1) — snippet</a></li>
+<li><a href="https://www.zhihu.com/question/22471467" target="_blank" rel="noopener">谷歌内部考核制度 OKR 是怎样的？</a></li>
+<li><a href="http://www.cheers.com.tw/article/article.action?id=5083664" target="_blank" rel="noopener">【每日熱門網摘】別再多工了！「深度工作法」才能讓你提早下班</a></li>
+</ol>
+<p>（image via <a href="https://associatesmind.com/wp-content/uploads/2016/01/Cal-Newport-Deep-Work.jpg" target="_blank" rel="noopener">associatesmind</a>、<a href="https://cdn.kingstone.com.tw/book/images/product/20149/2014941495564/2014941495564b.jpg" target="_blank" rel="noopener">kingstone</a>）</p>
+
+                </div>
+
+                <br>
+                <div>喜歡我們的文章嗎？歡迎分享按讚給予我們支持和鼓勵！</div>
+                <div>
+                    <div class="fb-like" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                </div>
+                <br>
+                <div>
+                    <div class="fb-page" data-href="https://www.facebook.com/kdchang.cc" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/kdchang.cc" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/kdchang.cc">KD Chang（張凱迪）</a></blockquote></div>
+                </div>
+                <hr>
+                <div>
+                    <h3>Related Posts</h3>
+                    <div>
+                        <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2019/01/04/what-is-the-experience-of-be-a-scrum-master/" title="產品開發現場：當一個 Scrum Master 是一個怎樣的體驗？" rel="bookmark">產品開發現場：當一個 Scrum Master 是一個怎樣的體驗？</a></h3></div></li><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/06/30/financial-statements-analysis-introduction/" title="財報分析入門筆記" rel="bookmark">財報分析入門筆記</a></h3></div></li></ul>
+                    </div>
+                </div>
+                <!-- Tags -->
+                <h3>Comments</h3>
+                <hr>
+                
+                <!-- disqus start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus end -->
+                
+
+            </div>
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "kdchang-blog";
+    var disqus_identifier = "https://blog.kdchang.cc/2017/09/10/stay-focus-and-keep-deep-working/";
+    var disqus_url = "https://blog.kdchang.cc/2017/09/10/stay-focus-and-keep-deep-working/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5728979c6a10856b"></script>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<!-- <script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script> -->
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+   anchors.add('h1, h2, h3');
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/kaidichang">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/kdchang.cc">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/kdchang">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Special thanks <a href="https://www.flickr.com/photos/57265953@N06/" target="_blank">Rafael</a>、<a href="https://www.flickr.com/photos/derek-john-lee/14698093740/in/photolist-ooPzcj-r2kVt-ppV21v-brhFX3-wd3Qsy-cLiKEL-xDR92-28QCtA-29YFZZ-gzuZk-dqbhxt-9FwCBY-q57bEv-bVhZJr-dYxGXn-dxg9g7-8x7gjU-dzjMic-rQhf-9TMgJ3-mEsFjW-qbzd4p-q6cJvc-7zYttk-q2gE5S-bdb4G4-8ifmQN-eivVeg-9ZZFVz-aD6q6r-bnjfWh-qJAn2g-k22Ttf-n9Jhfj-kk4woh-sj43iz-5NYGUn-96wNhi-9ZZFz6-8DJkQf-4wQizw-3bzz8p-9yzTSd-xDQee-68Xwfp-7t5WPx-xDTM5-o5RPYA-kWihhy-7iHDEX" target="_blank">Derek</a>、<a href="https://www.flickr.com/photos/mashleymorgan/" target="_blank">mashleymorgan</a>、<a href="https://www.flickr.com/photos/mustafeez27/" target="_blank">mustafeez27</a>         
+                    and <a href="http://blog.kaijun.rocks" target="_blank">Kaijun</a>
+                    <br> 
+                    Copyright &copy; KD Chang 2021 | 
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="200px" height="20px" src="https://ghbtns.com/github-btn.html?user=kdchang&type=follow&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+<!-- Custom Main JavaScript -->
+<script src="/js/main.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://blog.kdchang.cc/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47712654-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+	<!-- fb -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<a id="scroll-to-top-button">
+		<i class="fas fa-chevron-up"></i>
+	</a>
+	
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+/* Scroll To Top button */
+#scroll-to-top-button {
+	display: inline-block;
+	background-color: #DDDDDD;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	position: fixed;
+	bottom: 60px;
+	right: 30px;
+	transition: background-color .3s,
+	  opacity .5s, visibility .5s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 2000;
+	font-size: 30px;
+	color: #fff;
+}
+
+#scroll-to-top-button:hover {
+	cursor: pointer;
+	background-color: #333;
+}
+
+#scroll-to-top-button:active {
+	background-color: #555;
+}
+
+#scroll-to-top-button.show {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Scroll To Comment button */
+#scroll-to-comment-button {
+	display: inline-block;
+	background-color: #DDDDDD;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	position: fixed;
+	bottom: 80px;
+	right: 30px;
+	transition: background-color .3s,
+	  opacity .5s, visibility .5s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+	font-size: 30px;
+	color: #fff;
+}
+
+#scroll-to-comment-button:hover {
+	cursor: pointer;
+	background-color: #333;
+}
+
+#scroll-to-comment-button:active {
+	background-color: #555;
+}
+
+#scroll-to-comment-button.show {
+	opacity: 1;
+	visibility: visible;
+}

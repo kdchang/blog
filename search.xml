@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[產品開發現場：當一個 Scrum Master 是一個怎樣的體驗？]]></title>
+      <url>https://blog.kdchang.cc/2019/01/04/what-is-the-experience-of-be-a-scrum-master/</url>
+      <content type="html"><![CDATA[<p><img src="i-am-scrum-master.png" alt="當一個 Scrum Master 是一個怎樣的體驗？"></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><a href="https://zh.wikipedia.org/wiki/Scrum" target="_blank" rel="noopener">Scrum</a> 是一個以團隊為基礎來開發複雜系統和產品的敏捷開發框架和方法論。相信很多軟體開發人員都聽過 Scrum，而且也把它運用在產品開發中，然而每個團隊在使用 Scrum 時都會遇到不同的問題，有些是共通性的問題，有些是個別團隊所遇到的問題。過去一段時間在筆者的職業生涯中因緣際會地經歷了開發者、產品負責人以及 Scrum Master 等角色，對於不同角色的特性和所應具備的特質和能力以及 Scrum 的能與不能都有些許的認識。接下來，本文將透過一個 Scrum Master 視角去探討 Scrum Master 在 Scrum Team 中所扮演的角色和可能遇到的挑戰和機遇。</p>
+<p><img src="scrum-rules.png" alt="當一個 Scrum Master 是一個怎樣的體驗？"></p>
+<h1 id="Scrum-先修課：關於-Scrum-你必須先明白的專有名詞"><a href="#Scrum-先修課：關於-Scrum-你必須先明白的專有名詞" class="headerlink" title="Scrum 先修課：關於 Scrum 你必須先明白的專有名詞"></a>Scrum 先修課：關於 Scrum 你必須先明白的專有名詞</h1><h2 id="Role-角色"><a href="#Role-角色" class="headerlink" title="Role 角色"></a>Role 角色</h2><ol>
+<li><p>Product Owner<br> 負責規劃產品 road map，負責釐清使用者和 Stakeholder 的需求並轉化成具有商業價值的 User Story，並評估 Story 的優先順序，決定哪些項目要從 Backlog 進入到 sprint 當中。此外，Product Owner 也必須和 Dev Team 成員討論出 Story 的 Acceptance criteria 和負責驗收成果</p>
+</li>
+<li><p>Scrum Master / Agile Coach<br> 又稱敏捷教練，負責導入 Scrum 流程並培養團隊成員具備 agile 思維。Scrum Master 負責主持 Scrum 相關會議與 process 和協助管理分析 Sprint 產出物，此外也必須協助整個流程持續改善，最終讓團隊達到 process self-managed 狀態。一般而言，Scrum Master 在團隊裡通常沒有實際管理權但必須協助其他成員在遇到 block 事情時去除障礙，有時也要扮演輔導長的角色激勵團隊士氣。簡言之，Scrum Master 是一個必須對於產品開發流程以及溝通能力有一定掌握並具備一定的技術實力的角色。說真的，真正要當的好 Scrum Master，不容易</p>
+</li>
+<li><p>Development Team / Dev Team<br> 具備跨職能的開發團隊成員（可以完成 User Story 的所有開發工作，包含開發、測試等），一般遵守兩塊 pizza 原則，以不超過 6-8 人為原則。團隊成員必須具備互助合作的騎士精神，以團隊目標為目標，在互相協助的基礎下一起在 Sprint 結束前完成於 Sprint 開始時所承諾應該交付的任務</p>
+</li>
+<li><p>Stakeholder<br> 利害關係人，需求的起源地。在直接面對消費者市場的產品團隊可能是一般消費者，若是開發內部工具或是面對企業市場的產品團隊，利害關係人可能會是 AM（客戶經理）、BD（商務拓展）、Tech Support（技術支援）、Marketing（行銷）等單位的同仁</p>
+</li>
+</ol>
+<p><img src="scrum-process.jpg" alt="當一個 Scrum Master 是一個怎樣的體驗？"></p>
+<h2 id="Event-活動"><a href="#Event-活動" class="headerlink" title="Event 活動"></a>Event 活動</h2><ol>
+<li><p>Sprint<br> Sprint 在橄欖球中為衝刺的意思，指的是一個 Scrum 的週期。通常以 2-4 週為一個單位，理論上除了緊急 bug 或是 task 外，不能於 Sprint 開始後額外新增 Story 進入 Sprint 當中</p>
+</li>
+<li><p>Sprint Planning，會議時間：1-2 hours<br> 於 Sprint 開始前舉辦的會議。根據 Product Owner 的優先順序和團隊可以消耗的點數（velocity）評估哪些 Story 需要進入到 Sprint 當中的會議。由 Scrum Master 主持，Product Owner 和 Dev Team 參與，由 Dev Team 認領想要負責的 Story，Dev Team 於會議結束後根據 Story 劃分成更細部的 task，然後 Scrum Master 確認沒問題後開始 Sprint 的週期</p>
+</li>
+<li><p>Sprint Gromming (Backlog Refinement/Stroy time)，會議時間：一次 2-3 hours 或分成兩次，每次 1-1.5 hours<br> 於 Sprint 中間舉辦的會議，主要目的在評估下一個 Sprint 中要從 Backlog 中拿出來做的 Story 點數的估計（Planning poker）。一般透過 Product Owner 說明 User Story 然後和 Dev Team 討論定義出以 User 角度表述的 Acceptance criteria。記得這邊的 Story Point 是相對值並不是完全 mapping 到時間，而且每個 team 的狀況都會不一樣，主要是根據你們 team 對於這項 Story 的 Complexity、Uncertainty 和 Effort 去做評估，一般使用費式數列表示（1、2、3、5、8、13、21…）。這個會議十分重要，透過 Planning poker 的過程可以讓大家對於 Story 的認知和知識可以 align 到同一條線上（例如估計點數不一致時彼此說明和討論，增進對於 Story 和系統的了解）。記得，若是 User Story 過大，沒辦法在一個 Sprint 完成會建議把它切成比較小的 Story。若是連 Product Owner 都沒辦法描述很清楚的 User Story 會要求 Product Owner 先去釐清需求在下一次 Sprint Gromming 會議或是 Sprint Planning 前再次 repoint</p>
+</li>
+<li><p>Sprint Review (Sprint Demo)，會議時間：兩次 30mins（利害關係人/內部團隊）<br> 在 Sprint Review 中，Scrum Master 會邀請 Stakeholder 參與會議，由 Scrum Master 簡介這次 Sprint 所完成的 Shippable Product Increment（可交付的產品增量）和 Dev Team 展示開發成果。讓市場業務端和系統開發端可以彼此溝通並確認產品方向與市場吻合，若是有需要產品改善或是新的需求產生將由 Product Owner 釐清後放入 Backlog 中</p>
+</li>
+<li><p>Sprint Retrospective（Sprint Retro），會議時間：一次 1 hour<br> Sprint Retro 簡而言之式是 Scrum team 於 Sprint 結束時的閉門會議。通常在透過感謝的對象來緩和氣氛，並檢討這次 Sprint 的流程是否有需要檢討的部份或是做的不錯的部份，若是沒有完全完成所承諾要完成的事情，必須了解原因（例如低估複雜度或是中間有遇到 block 影響開發）。通常會搭配 Sprint Planning Doc 和 Burn down chart 以及上次的 Sprint Retrospective Doc 列出的 todo item 來進行檢討</p>
+</li>
+<li><p>Daily Scrum (Daily Standup Meeting)<br> 每天約 15 分鐘的站立會議，每位 Scrum team 更新自己昨天完成的事項、今天預計完成的事項以及是否有遇到什麼 block 阻礙。若是有 block 將由 Scrum Master 溝通協調並調度團隊資源協助移除成員障礙。若是有無法在 Sprint 結束前完成的 Story 也要讓 Product Owner 提早知道。另外，Burn down 也是需要在 Daily Scrum 大家要一起觀看 Sprint 是否有正常運作的指標</p>
+</li>
+<li><p>User Stroy Mapping / workshop，會議時間：一次 1.5-2 hours<br> 一般不能算是標準的 Sprint Event，通常是 Product Owner 在對於開發新產品的掌握度比較低，需要開發成員一起協助定義 User Story 所召開的會議</p>
+</li>
+</ol>
+<h2 id="Artifact-產出物"><a href="#Artifact-產出物" class="headerlink" title="Artifact 產出物"></a>Artifact 產出物</h2><ol>
+<li><p>Backlog<br> 裝有待完成的 Story 或是 Bug 的袋子，在 Sprint Gromming 時根據 Priority 進行點數估計，於 Sprint Planning 決定哪些已估計 Story 需要進入這次的 Sprint 當中</p>
+</li>
+<li><p>Sprint Planning Doc<br> 記錄當次 Sprint 所承諾要完成的 Story 和需要修復的 Bug（通常為插單緊急 Bug 或是不緊急但有在 Gromming 進行點數估計的 Story），Dev Team 成員需要定期更新所負責的 Story 的相關文件</p>
+</li>
+<li><p>Sprint Gromming Doc<br> 記錄當次 Sprint 所承諾要完成的 Story / Acceptance criteria 和需要修復的 Bug 的點數估計。</p>
+</li>
+<li><p>Sprint Retrospective Doc<br> 記錄 Sprint 檢討會議中的待辦事項和檢討事項</p>
+</li>
+<li><p>Burn down chart / Burn up chart<br> 以團隊為單位，記錄 Sprint 完成狀況的圖表，Burn down chart 記錄點數完成下降的趨勢。Burn up chart 記錄累積完成的點數和 scope 的趨勢</p>
+<p> <img src="burn-down-burn-up.jpg" alt="當一個 Scrum Master 是一個怎樣的體驗？"></p>
+</li>
+<li><p>Scrum Board<br> 記錄 Sprint 過程中每一個 Story 以及 Story 下 task 的狀況，是在 Todo 還是 In Progress 還是 Done</p>
+<p> <img src="scrum-board.png" alt="當一個 Scrum Master 是一個怎樣的體驗？"></p>
+</li>
+<li><p>Definition of Done（DoD）<br> 團隊定義的驗收成果標準，例如開發一個新功能必須含：Dev + QA + Doc + Deploy 才算 Done，是每一個 Story 都必須遵守的完成標準</p>
+</li>
+<li><p>Epic / Theme / User Story / Acceptance criteria<br> User Story 是用使用者需求角度撰寫的有商業價值的一段敘述，而 Acceptance criteria 則是更為細部的補充描述。當有數個 story 隸屬於某一個相關 feature 時通常會把它歸為同一個 Theme，若是一個大的產品或是系統需要橫跨數個 sprint 時會把這些 Story 都歸類為同一個 Epic</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># User Stroy</span><br><span class="line">我是一個網站使用者</span><br><span class="line">我想要可以提交 feedback</span><br><span class="line">這樣網站開發者就可以根據使用者的回饋去優化網站</span><br><span class="line"></span><br><span class="line"># Acceptance criteria</span><br><span class="line">當使用者點選右下角的圓點按鈕後，可以看到表單，表單上面有姓名、email 和回饋訊息三個欄位</span><br><span class="line">當使用者填完表單送出後若成功會閃出一個提交成功的訊息</span><br><span class="line">當使用者表單項目有缺漏時會有提示訊息提示</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="那些擔任-Scrum-Master-學到的事"><a href="#那些擔任-Scrum-Master-學到的事" class="headerlink" title="那些擔任 Scrum Master 學到的事"></a>那些擔任 Scrum Master 學到的事</h1><p>在了解 Scrum 相關的專有名詞後我們就可以開始我們 Sprint 啦！但事實上，Scrum 只是一種框架和方法論，實際我們在執行 Scrum 時往往會因為團隊成員的不同或是組織文化的不同而產生不同的效果。接著讓我們來看看實際上在執行 Scrum 會有哪些需要留意的觀念</p>
+<ol>
+<li><p>基礎建設和團隊素質很重要<br> CI/CD 基礎建設、DevOps 文化、Agile 精神、團隊是否具備開發上所需的所有技能等都是 Scrum 運作能否順暢很重要的一環，若是基礎建設不穩，很多時候我們的點數估計往往會低估，造成 Sprint 運作上的困難。另外若是團隊成員都具備 T 型人才的能力也將讓 Scrum 運作更順暢</p>
+</li>
+<li><p>我們是一個職業球隊<br> Sprint 是以團隊為基礎，Burn down chart 不是一個人的 Burn down chart，所以若是有團隊夥伴遇到困難是需要其他夥伴協助（例如：對於系統架構不熟悉），其他比較熟悉的夥伴應該主動給予協助。若是有夥伴無法如期完成任務，其他若有夥伴已經完成手上的事情，也可以主動協助一起完成剩下的工作，確保 Sprint 結束後當初承諾的任務都是有可交付的產出</p>
+</li>
+<li><p>Scrum 是一面照妖鏡<br> 透過 Scrum 可以讓當初不清楚的使用者需求、無根據的預估工作時間和無限制需求的亂象可以被攤在陽光下檢視和討論，才有機會透過 Scrum process 來管理和改善</p>
+</li>
+<li><p>通常絆腳石是你不能說名字的那個人<br> 在推行 Scrum 時，公司高層和文化的支持也是十分重要，因為通常公司推展 Scrum 或是敏捷開發會失敗，通常絆腳石是你不能說名字的那個人</p>
+</li>
+<li><p>保持你的步伐<br> 排定好時間後就固定下來，讓團隊成員可以調整好自己的節奏並有更多事情可以專注在任務完成上而非冗長會議或是雜事上</p>
+</li>
+<li><p>要測量才能進步<br> 每次 Sprint 結束一定要有檢討並透過數據圖表等檢視可以改善的部分，持續優化整個流程</p>
+</li>
+<li><p>軟體開發流程沒有銀彈<br> 講了那麼多，事實上 Scrum 也並非萬能，碰上常常會有臨時性任務或是 operation issue 特性任務的團隊，或許可以考慮使用 Kanban，更甚於 Scrum。另外，像是技術研究單位，使用 Scrum 也未必是一種好選擇</p>
+</li>
+</ol>
+<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><p>以上透過一個 Scrum Master 視角去探討 Scrum Master 在 Scrum Team 中所扮演的角色和可能遇到的挑戰和機遇。Scrum Master 是一個必須對於產品開發流程以及溝通能力有一定掌握並具備一定的技術實力的角色。說真的，真正要當的好 Scrum Master，不容易。事實上，Scrum 真正目標在於建立一個自我管理的組織，讓 Process 而非人來管理。當 Scrum 真正成功的時候，就是 Scrum Master 可以退休的時候了。</p>
+<h1 id="參考文件"><a href="#參考文件" class="headerlink" title="參考文件"></a>參考文件</h1><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/28314519" target="_blank" rel="noopener">燃尽图 （Burn up and Burn down Chart）—介绍</a></li>
+<li><a href="https://rubygarage.org/blog/clear-acceptance-criteria-and-why-its-important" target="_blank" rel="noopener">Clear Acceptance Criteria and Why They’re Important</a></li>
+<li><a href>當一個 Scrum Master 是一個怎樣的體驗？</a></li>
+</ol>
+<p>（image via <a href="https://www.eohcoastal.co.za/uncategorized/tell-effective-scrum-master/" target="_blank" rel="noopener">eohcoastal</a>）</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 職場 </tag>
+            
+            <tag> career </tag>
+            
+            <tag> scrum </tag>
+            
+            <tag> scrum master </tag>
+            
+            <tag> product owner </tag>
+            
+            <tag> dev tame </tag>
+            
+            <tag> 軟體工程師 </tag>
+            
+            <tag> 軟體工程 </tag>
+            
+            <tag> software engineering </tag>
+            
+            <tag> 敏捷開發 </tag>
+            
+            <tag> agile </tag>
+            
+            <tag> 產品開發現場 </tag>
+            
+            <tag> 專案管理 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[在注意力稀缺的時代重新找回深度工作力（Deep Work）]]></title>
+      <url>https://blog.kdchang.cc/2017/09/10/stay-focus-and-keep-deep-working/</url>
+      <content type="html"><![CDATA[<p><img src="deep-work.jpg" alt="在注意力稀缺的時代重新找回深度工作力"></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>隨著網際網路和科技產品的發展，人們除了時間外，注意力、專注力和深度工作力也成為十分稀缺的資產。現代人號稱一天工作八小時甚至更長，但我們往往在開會、被打斷、逛網站、滑手機、處理私人事務和在茶水間討論公司組織裡的八卦中切換我們的思緒，實際上真正有生產力和進入心流專注狀態可能不過幾個小時。</p>
+<p>或許是希望在日常工作之餘多一點自我時間，在生活瑣事襲來時能保有自我的追求，我很喜歡閱讀各類型有關提高工作生產力和自我學習的書籍並在生活中實踐。最近看的這本由 Cal Newport 撰寫的 <a href="https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692" target="_blank" rel="noopener">Deep Work: Rules for Focused Success in a Distracted World Hardcover</a>（<a href="http://www.books.com.tw/products/0010758381" target="_blank" rel="noopener">中文書名：深度工作力</a>）討論了最近幾年在工作生產力書籍中時常被談到的議題：專注力和工作效率，並明確定義了深度工作力和淺薄工作力的區別。書中沒有複雜的理論，取而代之的是淺顯的範例和建議，蠻適合希望在競爭激烈的知識經濟時代保有核心工作力的朋友當做入門的概論書來看。</p>
+<h1 id="在新經濟社會需要具備的深度工作力"><a href="#在新經濟社會需要具備的深度工作力" class="headerlink" title="在新經濟社會需要具備的深度工作力"></a>在新經濟社會需要具備的深度工作力</h1><p>本書一開始定義了什麼是<code>深度工作</code>，什麼是<code>淺薄工作</code>。所謂的深度工作是在一段充分專注的情況下所從事的職業活動。在深度工作的狀態下你可以將你的認知能力發揮到極限，進而改善並學習困難的專業技術，創造新的價值並建立他人難以模仿的專業能力和思考洞察。相對而言，淺薄工作主要是不需要高認知需求，偏向回覆性、協調性工作，通常不太需要太多專注力就可以執行，通常這類型工作創造價值有限，且容易被模仿。</p>
+<p>當然書中也提到了一些比較特別的例子，包括身兼 Twitter 執行長和 Squard CEO 的 Jack Dorsey，工作上確實花很多時間在做淺薄工作，例如：擔任主管開各種會議、不斷被打斷、收發 Email 等。然而這類主管、業務員和網路行銷企劃人員隨時保持社會連線是很重要的事情，因為這些淺薄工作就是驅動他們工作的重要因子。</p>
+<p>儘管如此，若能在這類工作中適度的融入深度工作或許也有機會發揮意想不到的成果，例如：微軟共同創辦人 Bill Gates 就以一年兩次的沉思週而聞名。在沉思期間他會離群索居於湖濱小屋中思考未來的趨勢發展，也是在沉思期間 Gates 寫下來網際網路浪潮的備忘錄，將注意力轉往當時才剛發展不久的全球第一個商用瀏覽器 Netscape（網景），進而揭開了第一次瀏覽器大戰。</p>
+<h1 id="在注意力稀缺的時代重新找回深度工作力"><a href="#在注意力稀缺的時代重新找回深度工作力" class="headerlink" title="在注意力稀缺的時代重新找回深度工作力"></a>在注意力稀缺的時代重新找回深度工作力</h1><p>對於一般沒有初始化繼承衣缽的經濟資本的人來說，透過深度工作力的培養是達成職涯目標的一個可以嘗試的方式。尤其在世界公民的時代，現在是人類歷史上工作力流動最頻繁的年代，擁有無可取代的技術和專業能力的超級明星比起從前任何時候所能發揮的影響力更大更深遠。</p>
+<p>讀到這裡，如果你認同深度工作力，在這邊我融合了書中一些方法建議和我個人的經驗整理和大家分享，也歡迎讀者們補充：</p>
+<h3 id="1-忙碌不代表有生產力，很有可能是瞎忙，具體量化做的工作內容"><a href="#1-忙碌不代表有生產力，很有可能是瞎忙，具體量化做的工作內容" class="headerlink" title="1. 忙碌不代表有生產力，很有可能是瞎忙，具體量化做的工作內容"></a>1. 忙碌不代表有生產力，很有可能是瞎忙，具體量化做的工作內容</h3><p>這邊推薦使用 <a href="http://wiki.mbalib.com/zh-tw/OKR" target="_blank" rel="noopener">Objectives and Key Results，OKR</a> 來定義一年和每季需要完成的目標並使用 <a href="http://blog.idonethis.com/google-snippets-internal-tool/" target="_blank" rel="noopener">Google Snippets template</a>（感謝一位朋友推薦使用）追蹤記錄每天的工作內容。另外，雖不用到古人吾日三省吾身的狀態，但可以參考 <a href="https://zh.wikipedia.org/zh-tw/Scrum" target="_blank" rel="noopener">Scrum</a> 敏捷開發方法中的 Stand up meeting 每天自問自己昨天做了什麼，今天打算做什麼，有沒有遇到哪些困難。</p>
+<p><img src="snippet.png" alt="在注意力稀缺的時代重新找回深度工作力"></p>
+<h3 id="2-記錄自己一天中什麼時間最有生產力並定期檢討，找到適合自己工作和生活的節奏"><a href="#2-記錄自己一天中什麼時間最有生產力並定期檢討，找到適合自己工作和生活的節奏" class="headerlink" title="2. 記錄自己一天中什麼時間最有生產力並定期檢討，找到適合自己工作和生活的節奏"></a>2. 記錄自己一天中什麼時間最有生產力並定期檢討，找到適合自己工作和生活的節奏</h3><p>在記錄完自己一到兩週的工作內容後，便可以利用這些 data 進行資料分析，找到自己最具生產力的時段。有的人習慣早上工作，像我一般習慣在一大早起來頭腦清楚時進行思考和需要專注度的工作，而有的人習慣在深夜夜深人靜時工作，沒什麼對錯，就是充分了解自己就好。</p>
+<h3 id="3-練習斷網一天，放天無網路假，不用手機和電腦，從中篩選合適自己的使用方式"><a href="#3-練習斷網一天，放天無網路假，不用手機和電腦，從中篩選合適自己的使用方式" class="headerlink" title="3. 練習斷網一天，放天無網路假，不用手機和電腦，從中篩選合適自己的使用方式"></a>3. 練習斷網一天，放天無網路假，不用手機和電腦，從中篩選合適自己的使用方式</h3><p>拜智慧型手機所賜，現代人使用網路的時間遠遠大於過去，然而我們常常在使用網路過程中有意無意浪費了許多寶貴時間和專注力。建議可以從中篩選合適自己的社群網站和媒體以及使用方式。</p>
+<h3 id="4-定義自己回覆訊息和電子郵件的方法和原則"><a href="#4-定義自己回覆訊息和電子郵件的方法和原則" class="headerlink" title="4. 定義自己回覆訊息和電子郵件的方法和原則"></a>4. 定義自己回覆訊息和電子郵件的方法和原則</h3><p>現在人上網很多時間是在回覆訊息和電子郵件，有些工作者每天甚至被數百封電子郵件給淹沒。若能掌握幾個原則則有機會可以提高自己的工作效率：例如：公告了自己的電子信箱同時就明確定義發信的範本和收信規則讓發信過來的人可以具體化自己的問題，一方面也篩選掉了沒有準備好的聯絡者。定義好收信、回信時間和回信規則，不需要時時刻刻 context switch 去收發電子信箱。</p>
+<h3 id="5-打造屬於自己的工作環境和工作儀式"><a href="#5-打造屬於自己的工作環境和工作儀式" class="headerlink" title="5. 打造屬於自己的工作環境和工作儀式"></a>5. 打造屬於自己的工作環境和工作儀式</h3><p>人會因為服裝和環境而改變自己的行為，建立起自己的高效率工作環境和工作儀式，例如有的人喜歡在咖啡廳工作，在來杯拿鐵咖啡或是聽一首熟悉的歌後開啟自己的工作模式，所以找到自己的那杯咖啡吧！</p>
+<h3 id="6-不斷累積相關知識和技巧，成為擁有具有深度工作力和快速學習能力的專業工作者"><a href="#6-不斷累積相關知識和技巧，成為擁有具有深度工作力和快速學習能力的專業工作者" class="headerlink" title="6. 不斷累積相關知識和技巧，成為擁有具有深度工作力和快速學習能力的專業工作者"></a>6. 不斷累積相關知識和技巧，成為擁有具有深度工作力和快速學習能力的專業工作者</h3><p>隨著科技的指數性成長，各種科技工具推陳出新（例如：追蹤上網時間的 <a href="https://toggl.com/" target="_blank" rel="noopener">toggl</a>、todo 工具：<a href="https://pomotodo.com/" target="_blank" rel="noopener">番茄土豆</a>、<a href="https://zhtw.todoist.com/" target="_blank" rel="noopener">todoist</a>），如何善用不同的工作技巧和生產力工具並培養自己快速學習各種跨領域技術的能力將可以讓自己持續保有專業活力。</p>
+<h3 id="7-定期運動、規律飲食和作息，保持身心靈健康"><a href="#7-定期運動、規律飲食和作息，保持身心靈健康" class="headerlink" title="7. 定期運動、規律飲食和作息，保持身心靈健康"></a>7. 定期運動、規律飲食和作息，保持身心靈健康</h3><p>雖然是老生常談，但定期運動、規律飲食和作息可以讓自己在忙碌的工作中儲備好能力，迎接生活中的每一個挑戰！</p>
+<p><img src="book.jpg" alt="在注意力稀缺的時代重新找回深度工作力"></p>
+<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><p>以上分享了幾個我覺得蠻實用的工作生產力技巧和深度工作力這本書的一些讀後心得，在這個專注力稀缺的年代，注意力和深度工作力是除了時間外珍貴的稀缺資源。把握幾個核心原則並刻意練習，相信你也可以在注意力稀缺的時代重新找回深度工作力，也歡迎讀者若有覺得不錯的提高工作生產力技巧補充分享！</p>
+<h1 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h1><ol>
+<li><a href="http://blog.idonethis.com/silicon-valleys-productivity-secret/" target="_blank" rel="noopener">Silicon Valley’s Productivity Secret</a></li>
+<li><a href="http://dannyimages.com/2012/06/05/2106-smart-working-with-snippets/" target="_blank" rel="noopener">敏捷工作術(1) — snippet</a></li>
+<li><a href="https://www.zhihu.com/question/22471467" target="_blank" rel="noopener">谷歌内部考核制度 OKR 是怎样的？</a></li>
+<li><a href="http://www.cheers.com.tw/article/article.action?id=5083664" target="_blank" rel="noopener">【每日熱門網摘】別再多工了！「深度工作法」才能讓你提早下班</a></li>
+</ol>
+<p>（image via <a href="https://associatesmind.com/wp-content/uploads/2016/01/Cal-Newport-Deep-Work.jpg" target="_blank" rel="noopener">associatesmind</a>、<a href="https://cdn.kingstone.com.tw/book/images/product/20149/2014941495564/2014941495564b.jpg" target="_blank" rel="noopener">kingstone</a>）</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 財務 </tag>
+            
+            <tag> 職場 </tag>
+            
+            <tag> 商業管理 </tag>
+            
+            <tag> 人生 </tag>
+            
+            <tag> 溝通 </tag>
+            
+            <tag> 專注力 </tag>
+            
+            <tag> focus </tag>
+            
+            <tag> deep work </tag>
+            
+            <tag> 深度工作力 </tag>
+            
+            <tag> 工作力 </tag>
+            
+            <tag> career </tag>
+            
+            <tag> work </tag>
+            
+            <tag> 生產力工具 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[財報分析入門筆記]]></title>
+      <url>https://blog.kdchang.cc/2017/06/30/financial-statements-analysis-introduction/</url>
+      <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>財務報表是一家公司的體質檢查表，透過財務報表可以了解這家公司的財務狀況和營運狀況，也就是說可以透過財務報表去一窺公司的身體健康是否硬朗或是漸漸亮起紅燈。許多人以為財務報表晦澀難懂，只有經營者、會計師或是財務分析師才需要了解。事實上，財務報表的觀念並不難懂，不管是投資大眾甚至是公司員工應該都要對自己投資和工作的公司要有所掌握，一般投資人若能了解財報就有機會從中挖掘被低估的優質股票進而獲取相對報酬（賺錢），而一般員工若能掌握財報資訊，更能全面性了解公司營運狀況和未來發展方向，為自己的職涯加分。</p>
+<p>一般來說財務報表有分為損益表、資產負債表、現金流量表和股東權益變動表等。其中損益表代表公司的營業收益狀況，資產負債表代表公司的資產和負債的組成元素，股東權益變動表則是記錄了股東權益的變動情況，而現金流量表則是呈現了公司現金流的狀況。以下就讓我們用財報獲利性分析、安全性分析、價值評估、成長性分析一一來探索。</p>
+<h1 id="財務報表"><a href="#財務報表" class="headerlink" title="財務報表"></a>財務報表</h1><h2 id="損益表"><a href="#損益表" class="headerlink" title="損益表"></a>損益表</h2><p>損益表彙整了企業過去一段時間的營運狀況（一季、半年和一年）。從中可以看出企業銷貨收入、營業毛利、營業費用、淨利或是淨損和每股盈餘的狀況，進一步了解公司生意狀況和是否賺錢？</p>
+<p><img src="income.png" alt="一看就懂的財報分析入門教學"> </p>
+<h2 id="資產負債表"><a href="#資產負債表" class="headerlink" title="資產負債表"></a>資產負債表</h2><p>資產負債表呈現了企業在某一個特定日下的財務狀況，表中列出企業的資產和負債狀況，可以了解企業的存貨、土地、廠房以及長短期債務狀況。</p>
+<p><img src="asset.png" alt="一看就懂的財報分析入門教學"> </p>
+<h2 id="股東權益變動表"><a href="#股東權益變動表" class="headerlink" title="股東權益變動表"></a>股東權益變動表</h2><p>想知道股東分紅，未分配的盈餘有多少，經營團隊是否為股東創造價值則可以透過股東權益變動表去了解。</p>
+<p><img src="shareholder.png" alt="一看就懂的財報分析入門教學"> </p>
+<h2 id="現金流量表"><a href="#現金流量表" class="headerlink" title="現金流量表"></a>現金流量表</h2><p>現金流量表以現金流入、流出為基準，說明企業在某一特定期間營業活動、投資活動、融資活動的現金變化，了解企業運用現金的方式和現金來源。</p>
+<p><img src="crash.png" alt="一看就懂的財報分析入門教學"> </p>
+<h1 id="財報分析"><a href="#財報分析" class="headerlink" title="財報分析"></a>財報分析</h1><h2 id="獲利性分析：公司是否可以穩定獲利？"><a href="#獲利性分析：公司是否可以穩定獲利？" class="headerlink" title="獲利性分析：公司是否可以穩定獲利？"></a>獲利性分析：公司是否可以穩定獲利？</h2><p>財報分析中最重要的就是獲利性分析，在商業世界中開公司就是要賺錢，所以公司是否穩定賺錢是最重要的事情，而且公司的獲利狀況往往會和公司股價高度相關，所以當我們投資或是找工作時公司的獲利狀況往往是考量的重點。在獲利性分析中我們主要看的指標主要有：有毛利率、營益率、淨利率和股東權益報酬率等。</p>
+<ol>
+<li><p>毛利率：產品競爭力（較適用於製造業）</p>
+<p> <code>毛利率 = (營業收入 - 營業成本) / 營業收入 * 100%</code></p>
+<p> 一般而言，製造業毛利率若能 &gt; 20% 就算是不錯的表現，但像是一些網路、軟體公司和 IC 設計公司其研發費用佔的是大宗，營業成本不高，所以毛利通常會比較高。</p>
+</li>
+<li><p>營益率/純益率：企業本業賺錢能力</p>
+<p> <code>營益率 = (營業毛利 - 營業費用) / 營業收入 * 100%</code></p>
+<p> 營業費用包含了管銷費用和研發費用等，營業毛利真正扣除營業費用才是真正的本業獲利。</p>
+</li>
+<li><p>淨利率</p>
+<p> <code>淨利率 = (營業淨利 - 營業外收入及利益) / 營業收入 * 100%</code></p>
+<p> 扣除業外損益（轉投資、買賣土地廠房收入）就是營業淨利，建議 &gt; 10%。一般看財報時不會把業外收入列入競爭力強弱指標（尤其要避開一次性的賣土地或是資產的收益狀況）</p>
+</li>
+<li><p>ROE 股東權益報酬率</p>
+<p> <code>股東權益報酬率 = 稅前淨利 / 股東權益總額 * 100%</code></p>
+<p> 一家公司長期獲利表現最好的指標莫過於 ROE，許多投資人多半會希望一家公司過去 5 年的 ROE 可以大於 15% 或 &gt; 10 %。一家為維持高 ROE 的公司就算是持續能考高分的績優學生，當然能挨過 6-8 年景氣循環更好。</p>
+<ul>
+<li><p>杜邦分析<br>杜邦分析最早起源於杜邦公司，其運用了 1. 企業的獲利能力 2. 運用資產的效率 3. 財務槓桿 來分析企業價值。</p>
+<p><code>ROE = 淨利 / 營收 * 營收 / 資產總額 * 資產總額 / 股東權益總額 * 100%</code><br><code>ROE = 淨利率(稅後純益率) * 總資產週轉率 * 股東權益乘數 * 100%</code><br><code>ROE = 獲利能力 * 資產運用效率 * 財務槓桿 * 100%</code></p>
+<p>利用杜邦分析，拆解 ROE 可以透視一間公司的獲利能力、管理能力、還有財務結果。並根據公司所處的位置，預測公司之後的走向。若 ROE 來自稅後純益代表產品競爭力佳，若能強化資產運用效率則可以創造更高的 ROE。若 ROE 來自於資產使用效率則代表可以使用較少的資產創造更高的獲益，若有擴廠消息和擴大資本支出則可以提高 ROE，若 ROE 來自於財務槓桿則企業營運績效並不健全。</p>
+</li>
+</ul>
+</li>
+<li><p>ROA 總資產報酬率</p>
+<p> <code>總資產報酬率 = 稅後淨利 / 資產總額 * 100%</code></p>
+<p> ROA 表示企業運用資產賺錢的本事，若是 ROA 長期往下通常代表公司投資的資產過多但賺錢效率不如以往，一般認為 ROA 有 8% 的才算是表現不錯，但還是要看產業別和過去同時間比較</p>
+</li>
+</ol>
+<h2 id="安全性分析：公司的財務狀況健康嗎？"><a href="#安全性分析：公司的財務狀況健康嗎？" class="headerlink" title="安全性分析：公司的財務狀況健康嗎？"></a>安全性分析：公司的財務狀況健康嗎？</h2><p>安全性分析主要是分析公司體質是否安全？公司會不會倒？許多公司看似驚人的獲利往往是不斷燒錢所創造出來的假象，安全性分析則是透過舉債以及財務槓桿操作的情況讓你避開這樣的地雷公司和股票。</p>
+<ol>
+<li><p>獲利含金量</p>
+<p> <code>獲利含金量 = 營業現金流入 / 稅後淨利 * 100%</code></p>
+<p> 代表企業營運真正帶回多少現金，是否真正賺到錢。一般建議獲利含金量 &gt; 80%</p>
+</li>
+<li><p>自由現金流量</p>
+<p> <code>自由現金流量 = 營業現金流量流入 - 投資現金流量流出</code></p>
+<p> 看公司是燒錢還是賺錢，一般而言過去 5-8 年大部分的自由現金流量必需大於 0，長期向上</p>
+</li>
+<li><p>長短期金融負債比</p>
+<p> <code>長短期金融負債比 = 長短期金融借款 / 資產總計 * 100%</code></p>
+<p> 如果單單看負債比容易錯過好公司，我們可以採取長短期金融負債比（長短期負債包括：短期借款、應付短期票據、一年到期長期負債、長期負債等）來看衡量真正造成企業還債壓力的債務狀況。一般而言建議 30% - 40% 以下</p>
+</li>
+</ol>
+<h2 id="價值分析：公司價值是否有被低估？"><a href="#價值分析：公司價值是否有被低估？" class="headerlink" title="價值分析：公司價值是否有被低估？"></a>價值分析：公司價值是否有被低估？</h2><p>以投資人角度來看，低買高賣賺取價差/資本利得是一種投資方式，但到底怎樣的股價才不算買貴，如何找到被低估的股票，這就要倚賴本益比、股價淨值比和股利折現率等評價指標了。</p>
+<ol>
+<li><p>本益比</p>
+<p> <code>EPS 每股盈餘 ＝ 稅後淨利 ／ 流通在外的普通股加權股數</code></p>
+<p> <code>本益比 = 股價 / EPS</code></p>
+<p> 一般建議本益比 &gt; 15 為合適進場時機</p>
+</li>
+<li><p>股價淨值比</p>
+<p> <code>每股淨值 = 股東權益總額 / 股數</code></p>
+<p> <code>股價淨值比 = 股價 / 每股淨值</code></p>
+<p> 股價淨值比表示在股票市場中，這檔股票每 1 元的帳面價值，用來判斷是否股價被低估。合理股價淨值比應介於 1-2 倍，不宜長期低於淨值。一家公司股價淨值比 &lt; 1 一定有原因，可能是被低估或是庫存偏高或是持續虧損。</p>
+</li>
+<li><p>現金殖利率</p>
+<p> <code>現金殖利率 = 過去五年平均現金股利 / 購買時股價 * 100%</code></p>
+<p> 避免打腫臉充胖子，建議評估 5 年現金殖利率大於 6.25%（5% 預留 20% 安全邊際）</p>
+</li>
+</ol>
+<h2 id="成長性分析：公司的成長動能是？"><a href="#成長性分析：公司的成長動能是？" class="headerlink" title="成長性分析：公司的成長動能是？"></a>成長性分析：公司的成長動能是？</h2><p>若一家公司具備以上三種條件就已經算是不錯的標的，但公司若展現好的長短期營收成長率則具備短期和長期成長動能（當然要避開一次性的賣土地或是資產的收益狀況），股價也會有相對的反應。</p>
+<ol>
+<li><p>營收年增率</p>
+<p> <code>營收年增率 = 近一年營收總和 - 去年同期營收總和 / 去年同期營收總和 * 100%</code></p>
+<p> 營收要和去年同期比較才有意義，而非看月增率，建議至少大於 0 - 5 %</p>
+</li>
+</ol>
+<h2 id="經營團隊與產業分析"><a href="#經營團隊與產業分析" class="headerlink" title="經營團隊與產業分析"></a>經營團隊與產業分析</h2><p>除了上述基本面分析外，一家公司的經營好壞跟其經營團隊和所處產業也有密切相關，一個低調務實打拚的專業經營團隊不論遇到經營亂流或是金融海嘯，呈現短期衰退，長期來看都可以靠著團隊努力客服難關。另外就是產業的狀況，公司是否處在上升性的產業就可以更了解財報背後呈現的原因和真實性。此外，會計師評語也可以讓投資人可以有機會避開地雷公司（正常情況：1. 無保留意見 2. 修正式保留意見）。</p>
+<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><p>以上就是簡易的財報分析入門教學，希望大家都可以有能力透過財報分析選對產業、選對公司和選對老闆，不需要再到處打聽路邊名牌，也能更全面性了解公司營運狀況和未來發展方向，為自己的職涯加分。</p>
+<h1 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h1><ol>
+<li><a href="http://mops.twse.com.tw/mops/web/index" target="_blank" rel="noopener">公開資訊觀測站</a></li>
+<li><a href="http://www.tse.com.tw/zh/#" target="_blank" rel="noopener">台灣證券交易所</a></li>
+<li><a href="http://www.cmoney.tw/learn/course/0520/topic/1115" target="_blank" rel="noopener">杜邦方程式</a></li>
+</ol>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> financial </tag>
+            
+            <tag> statement </tag>
+            
+            <tag> financial statement </tag>
+            
+            <tag> income statement </tag>
+            
+            <tag> balance sheet </tag>
+            
+            <tag> Cash flow statement </tag>
+            
+            <tag> finance </tag>
+            
+            <tag> 財務 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[給工程師的 Sketch Prototyping 簡易入門教學]]></title>
+      <url>https://blog.kdchang.cc/2016/06/04/sketch-prototyping-for-engineer/</url>
+      <content type="html"><![CDATA[<p><img src="sketchapp.png" alt="給工程師的 Sketch Prototyping 簡易入門教學"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><a href="http://www.sketchapp.com/" target="_blank" rel="noopener">Sketch</a> 是近來非常火紅的輕量級 UI 設計工具，簡易好上手的設計讓許多設計師紛紛從 PS 和以拉等其他工具跳槽過來，整個 Sketch 生態系也蓬勃發展。雖然筆者本業是工程師，但前陣子趁著買 Flinto （可以很輕易將 Sketch 的靜態頁面轉成 Prototype）送 Sketch 的行銷活動時同時入手了這兩套設計工具（雖然我把它當成買 Sketch 送 Flinto 啦：P），因此藉著機會分享一下給工程師的 Sketch Prototyping 簡易入門教學。當然有些讀者會疑惑：工程師學 Sketch 是要設計師搶飯碗嗎？（事實上很難啦）</p>
+<p>一般來說，在整個產品開發的過程當中，工程師和設計師的愛恨情仇已經可以編成好幾檔連續劇了，然而溝通不良的原因除了設計流程的問題外，有很大一部分是因為對於彼此的世界不了解（一個住火星，一個住土星？）。因此工程師和設計師若是試著了解對方的語言，或許就可以降低彼此的溝通成本，從此相親相愛了呢！而天賦異秉的人甚至有機會成為新創團隊人見人愛的超全端工程師（super full-stack<br>engineer）獨角獸，集設計、前後端、行動端、行銷業務技能於一身（咦）？好啦，言歸正傳，接下來就讓我們好好了解 Sketch 這個好用工具吧！</p>
+<p><img src="sketch-ui-kit.png" alt="給工程師的 Sketch Prototyping 簡易入門教學"></p>
+<h2 id="Sketch-基本介紹"><a href="#Sketch-基本介紹" class="headerlink" title="Sketch 基本介紹"></a>Sketch 基本介紹</h2><p>Sketch 是一個 Mac 上的輕量級介面設計工具。2010 年由荷蘭公司 Bohemian Coding 所創建，目前提供 30 天試用版，正式版 99 鎂（教育價5折優惠），不過目前只有提供 Mac 版本，所以只能先跟使用其他作業系統的朋友說聲 Sorry 啦！</p>
+<p>究竟 Sketch 有哪些優點，讓許多設計師因此琵琶別抱呢？</p>
+<h3 id="Sketch-優點"><a href="#Sketch-優點" class="headerlink" title="Sketch 優點"></a>Sketch 優點</h3><ol>
+<li>活躍的第三方套件生態系！</li>
+<li>專為 UI 設計而生（Artboard 設計可以方便 UI 設計） </li>
+<li>輕量級，簡單好上手（工程師 OS：就像 Sublime 之於 Eclipse）</li>
+<li>內建和可擴充的豐富 UI 模版（iOS、Material Design 等）</li>
+<li>搭配 <a href="https://www.flinto.com/" target="_blank" rel="noopener">Flinto</a>、<a href="https://zeplin.io/" target="_blank" rel="noopener">Zeplin</a> 可讓工程師更開心，設計師提早下班</li>
+<li>可以取代大部分 PS、以拉、Fireworks 等功能</li>
+<li>知名網路、科技公司都在用</li>
+</ol>
+<p>看完了 Sketch 優點，相信讀者們一定摩拳擦掌準備牛刀小試啦！</p>
+<h2 id="使用-Sketch-設計-Mobile-App-UI"><a href="#使用-Sketch-設計-Mobile-App-UI" class="headerlink" title="使用 Sketch 設計 Mobile App UI"></a>使用 Sketch 設計 Mobile App UI</h2><p>一般設計流程我們通常會有以下三種階段：</p>
+<ol>
+<li>Wireframe（線框圖）<br>保真度低（low fidelity ）、修改成本低。適合初期討論產品架構和基本功能。通常使用紙筆手繪，但建議於完成後電子化</li>
+<li>Mockup（視覺稿）<br>保真度中（middle fidelity ）、修改成本中。於 Mockup 階段著重於整體視覺、排版的靜態討論和確認，而 Sketch 主要會是在 Mockup 階段進行設計</li>
+<li>Prototype（原型）<br>保真度高（high fidelity ），接近最終產品、修改成本高。確認互動設計的流程並確認架構和視覺規劃是否有需要調整之處</li>
+</ol>
+<p>先介紹一下 Sketch 工作空間，左邊是圖層區，右邊是屬性、中間是工作區、上面是工具欄：</p>
+<p><img src="sketch-0.png" alt="給工程師的 Sketch Prototyping 簡易入門教學"></p>
+<p>工具欄可以點擊右鍵自定義：</p>
+<p><img src="sketch-0-1.png" alt="給工程師的 Sketch Prototyping 簡易入門教學"></p>
+<p>由於 UI 設計是 Sketch 主要的強項（尤其是行動端），在 Sketch 中 Artboard 是基礎的設計單元（成果展示區域），我們可以在一個 Page 中定義多個 Artboard。根據 Sketch 的設計，我們可以一次瀏覽多個 Artboard（也可說是多個介面），這樣可以更清楚整個設計 flow ，這是 Sketch 蠻大的一個優點（一覽眾山小？）。</p>
+<p>現在，我們終於開始設計我們的新 App UI 啦！首先，我們透過左上方的新增按鈕新增了一個 Artboard ，並選擇了 iPhone6 當做設計基底（有 iPhone、Android、RWD等可以選）。接下來我們要打開在 Sketch 中內建的元件模版，iOS 和 Material Design、icon設計等（網路上也有很多網友提供自己的設計可以下載），這邊因為是使用 iPhone6 的 Artboard，因此我們打開 iOS 元件模版。</p>
+<p><img src="sketch-7.png" alt="給工程師的 Sketch Prototyping 簡易入門教學"></p>
+<p><img src="sketch-1.png" alt="給工程師的 Sketch Prototyping 簡易入門教學"></p>
+<p><img src="sketch-2.png" alt="給工程師的 Sketch Prototyping 簡易入門教學"></p>
+<p>接下來進行複製貼上大法！將元件複製到 Artboard 上就可以了！現在小工程師也可以設計簡單的 UI 啦！可以透過右上角工具預覽或是分享的方式看到成果！</p>
+<p><img src="sketch-4.png" alt="給工程師的 Sketch Prototyping 簡易入門教學"></p>
+<h2 id="從-Mockup-到-Prototype"><a href="#從-Mockup-到-Prototype" class="headerlink" title="從 Mockup 到 Prototype"></a>從 Mockup 到 Prototype</h2><p><img src="sketch-flinto.png" alt="給工程師的 Sketch Prototyping 簡易入門教學"><br>透過 Sketch 設計完成靜態檔案，若我們想將靜態檔案轉成 Prototype 進行使用者測試，我們可以使用 Flinto 好工具！透過簡單的連結就可以讓你的 Sketch 動起來啦（目前支援了簡單的手勢和動畫）！</p>
+<p><img src="flinto-3.png" alt="給工程師的 Sketch Prototyping 簡易入門教學"></p>
+<p><img src="flinto-4.png" alt="給工程師的 Sketch Prototyping 簡易入門教學"></p>
+<p><img src="flinto-5.png" alt="給工程師的 Sketch Prototyping 簡易入門教學"></p>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>以上就是給工程師的 Sketch Prototyping 簡易入門教學。事實上透過整合 <a href="https://zeplin.io/" target="_blank" rel="noopener">Zeplin</a>（可以方便註解和查詢設計相對位置和色碼）、<a href="https://www.invisionapp.com/" target="_blank" rel="noopener">Invision</a>（支援變更記錄，可以當做版本控管使用）等工具進行協作，還可以更加加快整個產品設計流程。透過前期的完善溝通討論，不但可以降低後續的溝通成本更可以讓完成的產品更接近最初的設計，更重要的是讓工程師和設計師的感情更好了！若你對於 Sketch 有興趣可以<a href="http://slides.com/kd-chang/sketch-prototyping-for-engineer" target="_blank" rel="noopener">參考這份投影片</a>有更完整的教學介紹。另外也可以參考<a href="http://www.sketchapp.com/learn/" target="_blank" rel="noopener">官方教學影片</a>。最後再次強調工程師學 Sketch 並非要去搶設計師搶飯碗。而是工程師和設計師若是試著了解對方的語言，或許就可以降低彼此的溝通成本。同理也建議設計師們可以去試著學一些簡單的程式語言基礎概念。筆者才疏學淺，若讀者有任何學習心得也歡迎分享交流：）</p>
+<p><img src="sketch-5.png" alt="給工程師的 Sketch Prototyping 簡易入門教學"></p>
+<h2 id="常用外掛"><a href="#常用外掛" class="headerlink" title="常用外掛"></a>常用外掛</h2><ol start="0">
+<li><a href="http://sketchtoolbox.com/" target="_blank" rel="noopener">外掛管理工具 Sketch Toolbox</a></li>
+<li>Notebook 註解好幫手</li>
+<li>Sketch Flinto 從 Mockup 到 Prototype</li>
+<li>Content Generator Sketch Plugin 生成假資料</li>
+<li>Sketch Measure 測量位置、大小</li>
+<li>Icon Stamper 簡單生成不同大小 icon</li>
+</ol>
+<h2 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h2><ol>
+<li><a href="http://www.sketchcn.com/" target="_blank" rel="noopener">Sketch 簡體中文教學</a></li>
+<li><a href="http://www.sketchchina.com/" target="_blank" rel="noopener">Sketch 問答</a></li>
+</ol>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> SketchPrototyping </tag>
+            
+            <tag> Wireframe </tag>
+            
+            <tag> Mockup </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>

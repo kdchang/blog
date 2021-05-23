@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="記錄一個軟體工程師也是一位創業者/教育者/作者對教育學習、媒體出版、產品設計、創新創業、經營管理、政治經濟與職場人生的思考與觀察">
+    <meta name="keyword"  content="教育學習, 媒體出版, 產品設計, 創新創業, 經營管理, 政治經濟, 職場人生, 軟體工程師">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <meta name="google-site-verification" content="cMTgiEFMM7gXpRMBbu_05Lnj0scwhDPCMvpfhQOpENI" />
+
+    <title>
+        
+          財報分析入門筆記 - KD Chang
+        
+    </title>
+
+    <link rel="canonical" href="https://blog.kdchang.cc/2017/06/30/financial-statements-analysis-introduction/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- og tag -->
+    <meta name="generator" content="KD Chang">
+    
+      <meta name="og:title" content="財報分析入門筆記 - KD Chang">
+      <meta name="og:site_name" content="財報分析入門筆記 - KD Chang">
+    
+    <meta name="og:description" content="記錄一個軟體工程師也是一位創業者/教育者/作者對教育學習、媒體出版、產品設計、創新創業、經營管理、政治經濟與職場人生的思考與觀察">
+
+    <meta name="og:image" content="/img/favicon.ico">
+    <meta name="og:type" content="website">
+    <!--Twitter Graph-->
+    <meta name="twitter:card" content="summary" />
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">KD Chang</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    <li>
+                        <a href="/atom.xml">RSS</a>
+                    </li>                 
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('cover.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+
+                    <h1>財報分析入門筆記</h1>
+                    <span class="meta">
+                        Posted by kdchang on
+                        2017-06-30
+                    </span>
+                    <br>
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#financial" title="financial">financial</a>
+                        
+                          <a class="tag" href="/tags/#statement" title="statement">statement</a>
+                        
+                          <a class="tag" href="/tags/#financial statement" title="financial statement">financial statement</a>
+                        
+                          <a class="tag" href="/tags/#income statement" title="income statement">income statement</a>
+                        
+                          <a class="tag" href="/tags/#balance sheet" title="balance sheet">balance sheet</a>
+                        
+                          <a class="tag" href="/tags/#Cash flow statement" title="Cash flow statement">Cash flow statement</a>
+                        
+                          <a class="tag" href="/tags/#finance" title="finance">finance</a>
+                        
+                          <a class="tag" href="/tags/#財務" title="財務">財務</a>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+                <br>
+                <div>
+                    <div class="fb-like" data-href="https://www.facebook.com/kdchang.cc" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                </div>
+                <br>
+                <div>
+                    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>財務報表是一家公司的體質檢查表，透過財務報表可以了解這家公司的財務狀況和營運狀況，也就是說可以透過財務報表去一窺公司的身體健康是否硬朗或是漸漸亮起紅燈。許多人以為財務報表晦澀難懂，只有經營者、會計師或是財務分析師才需要了解。事實上，財務報表的觀念並不難懂，不管是投資大眾甚至是公司員工應該都要對自己投資和工作的公司要有所掌握，一般投資人若能了解財報就有機會從中挖掘被低估的優質股票進而獲取相對報酬（賺錢），而一般員工若能掌握財報資訊，更能全面性了解公司營運狀況和未來發展方向，為自己的職涯加分。</p>
+<p>一般來說財務報表有分為損益表、資產負債表、現金流量表和股東權益變動表等。其中損益表代表公司的營業收益狀況，資產負債表代表公司的資產和負債的組成元素，股東權益變動表則是記錄了股東權益的變動情況，而現金流量表則是呈現了公司現金流的狀況。以下就讓我們用財報獲利性分析、安全性分析、價值評估、成長性分析一一來探索。</p>
+<h1 id="財務報表"><a href="#財務報表" class="headerlink" title="財務報表"></a>財務報表</h1><h2 id="損益表"><a href="#損益表" class="headerlink" title="損益表"></a>損益表</h2><p>損益表彙整了企業過去一段時間的營運狀況（一季、半年和一年）。從中可以看出企業銷貨收入、營業毛利、營業費用、淨利或是淨損和每股盈餘的狀況，進一步了解公司生意狀況和是否賺錢？</p>
+<p><img src="income.png" alt="一看就懂的財報分析入門教學"> </p>
+<h2 id="資產負債表"><a href="#資產負債表" class="headerlink" title="資產負債表"></a>資產負債表</h2><p>資產負債表呈現了企業在某一個特定日下的財務狀況，表中列出企業的資產和負債狀況，可以了解企業的存貨、土地、廠房以及長短期債務狀況。</p>
+<p><img src="asset.png" alt="一看就懂的財報分析入門教學"> </p>
+<h2 id="股東權益變動表"><a href="#股東權益變動表" class="headerlink" title="股東權益變動表"></a>股東權益變動表</h2><p>想知道股東分紅，未分配的盈餘有多少，經營團隊是否為股東創造價值則可以透過股東權益變動表去了解。</p>
+<p><img src="shareholder.png" alt="一看就懂的財報分析入門教學"> </p>
+<h2 id="現金流量表"><a href="#現金流量表" class="headerlink" title="現金流量表"></a>現金流量表</h2><p>現金流量表以現金流入、流出為基準，說明企業在某一特定期間營業活動、投資活動、融資活動的現金變化，了解企業運用現金的方式和現金來源。</p>
+<p><img src="crash.png" alt="一看就懂的財報分析入門教學"> </p>
+<h1 id="財報分析"><a href="#財報分析" class="headerlink" title="財報分析"></a>財報分析</h1><h2 id="獲利性分析：公司是否可以穩定獲利？"><a href="#獲利性分析：公司是否可以穩定獲利？" class="headerlink" title="獲利性分析：公司是否可以穩定獲利？"></a>獲利性分析：公司是否可以穩定獲利？</h2><p>財報分析中最重要的就是獲利性分析，在商業世界中開公司就是要賺錢，所以公司是否穩定賺錢是最重要的事情，而且公司的獲利狀況往往會和公司股價高度相關，所以當我們投資或是找工作時公司的獲利狀況往往是考量的重點。在獲利性分析中我們主要看的指標主要有：有毛利率、營益率、淨利率和股東權益報酬率等。</p>
+<ol>
+<li><p>毛利率：產品競爭力（較適用於製造業）</p>
+<p> <code>毛利率 = (營業收入 - 營業成本) / 營業收入 * 100%</code></p>
+<p> 一般而言，製造業毛利率若能 &gt; 20% 就算是不錯的表現，但像是一些網路、軟體公司和 IC 設計公司其研發費用佔的是大宗，營業成本不高，所以毛利通常會比較高。</p>
+</li>
+<li><p>營益率/純益率：企業本業賺錢能力</p>
+<p> <code>營益率 = (營業毛利 - 營業費用) / 營業收入 * 100%</code></p>
+<p> 營業費用包含了管銷費用和研發費用等，營業毛利真正扣除營業費用才是真正的本業獲利。</p>
+</li>
+<li><p>淨利率</p>
+<p> <code>淨利率 = (營業淨利 - 營業外收入及利益) / 營業收入 * 100%</code></p>
+<p> 扣除業外損益（轉投資、買賣土地廠房收入）就是營業淨利，建議 &gt; 10%。一般看財報時不會把業外收入列入競爭力強弱指標（尤其要避開一次性的賣土地或是資產的收益狀況）</p>
+</li>
+<li><p>ROE 股東權益報酬率</p>
+<p> <code>股東權益報酬率 = 稅前淨利 / 股東權益總額 * 100%</code></p>
+<p> 一家公司長期獲利表現最好的指標莫過於 ROE，許多投資人多半會希望一家公司過去 5 年的 ROE 可以大於 15% 或 &gt; 10 %。一家為維持高 ROE 的公司就算是持續能考高分的績優學生，當然能挨過 6-8 年景氣循環更好。</p>
+<ul>
+<li><p>杜邦分析<br>杜邦分析最早起源於杜邦公司，其運用了 1. 企業的獲利能力 2. 運用資產的效率 3. 財務槓桿 來分析企業價值。</p>
+<p><code>ROE = 淨利 / 營收 * 營收 / 資產總額 * 資產總額 / 股東權益總額 * 100%</code><br><code>ROE = 淨利率(稅後純益率) * 總資產週轉率 * 股東權益乘數 * 100%</code><br><code>ROE = 獲利能力 * 資產運用效率 * 財務槓桿 * 100%</code></p>
+<p>利用杜邦分析，拆解 ROE 可以透視一間公司的獲利能力、管理能力、還有財務結果。並根據公司所處的位置，預測公司之後的走向。若 ROE 來自稅後純益代表產品競爭力佳，若能強化資產運用效率則可以創造更高的 ROE。若 ROE 來自於資產使用效率則代表可以使用較少的資產創造更高的獲益，若有擴廠消息和擴大資本支出則可以提高 ROE，若 ROE 來自於財務槓桿則企業營運績效並不健全。</p>
+</li>
+</ul>
+</li>
+<li><p>ROA 總資產報酬率</p>
+<p> <code>總資產報酬率 = 稅後淨利 / 資產總額 * 100%</code></p>
+<p> ROA 表示企業運用資產賺錢的本事，若是 ROA 長期往下通常代表公司投資的資產過多但賺錢效率不如以往，一般認為 ROA 有 8% 的才算是表現不錯，但還是要看產業別和過去同時間比較</p>
+</li>
+</ol>
+<h2 id="安全性分析：公司的財務狀況健康嗎？"><a href="#安全性分析：公司的財務狀況健康嗎？" class="headerlink" title="安全性分析：公司的財務狀況健康嗎？"></a>安全性分析：公司的財務狀況健康嗎？</h2><p>安全性分析主要是分析公司體質是否安全？公司會不會倒？許多公司看似驚人的獲利往往是不斷燒錢所創造出來的假象，安全性分析則是透過舉債以及財務槓桿操作的情況讓你避開這樣的地雷公司和股票。</p>
+<ol>
+<li><p>獲利含金量</p>
+<p> <code>獲利含金量 = 營業現金流入 / 稅後淨利 * 100%</code></p>
+<p> 代表企業營運真正帶回多少現金，是否真正賺到錢。一般建議獲利含金量 &gt; 80%</p>
+</li>
+<li><p>自由現金流量</p>
+<p> <code>自由現金流量 = 營業現金流量流入 - 投資現金流量流出</code></p>
+<p> 看公司是燒錢還是賺錢，一般而言過去 5-8 年大部分的自由現金流量必需大於 0，長期向上</p>
+</li>
+<li><p>長短期金融負債比</p>
+<p> <code>長短期金融負債比 = 長短期金融借款 / 資產總計 * 100%</code></p>
+<p> 如果單單看負債比容易錯過好公司，我們可以採取長短期金融負債比（長短期負債包括：短期借款、應付短期票據、一年到期長期負債、長期負債等）來看衡量真正造成企業還債壓力的債務狀況。一般而言建議 30% - 40% 以下</p>
+</li>
+</ol>
+<h2 id="價值分析：公司價值是否有被低估？"><a href="#價值分析：公司價值是否有被低估？" class="headerlink" title="價值分析：公司價值是否有被低估？"></a>價值分析：公司價值是否有被低估？</h2><p>以投資人角度來看，低買高賣賺取價差/資本利得是一種投資方式，但到底怎樣的股價才不算買貴，如何找到被低估的股票，這就要倚賴本益比、股價淨值比和股利折現率等評價指標了。</p>
+<ol>
+<li><p>本益比</p>
+<p> <code>EPS 每股盈餘 ＝ 稅後淨利 ／ 流通在外的普通股加權股數</code></p>
+<p> <code>本益比 = 股價 / EPS</code></p>
+<p> 一般建議本益比 &gt; 15 為合適進場時機</p>
+</li>
+<li><p>股價淨值比</p>
+<p> <code>每股淨值 = 股東權益總額 / 股數</code></p>
+<p> <code>股價淨值比 = 股價 / 每股淨值</code></p>
+<p> 股價淨值比表示在股票市場中，這檔股票每 1 元的帳面價值，用來判斷是否股價被低估。合理股價淨值比應介於 1-2 倍，不宜長期低於淨值。一家公司股價淨值比 &lt; 1 一定有原因，可能是被低估或是庫存偏高或是持續虧損。</p>
+</li>
+<li><p>現金殖利率</p>
+<p> <code>現金殖利率 = 過去五年平均現金股利 / 購買時股價 * 100%</code></p>
+<p> 避免打腫臉充胖子，建議評估 5 年現金殖利率大於 6.25%（5% 預留 20% 安全邊際）</p>
+</li>
+</ol>
+<h2 id="成長性分析：公司的成長動能是？"><a href="#成長性分析：公司的成長動能是？" class="headerlink" title="成長性分析：公司的成長動能是？"></a>成長性分析：公司的成長動能是？</h2><p>若一家公司具備以上三種條件就已經算是不錯的標的，但公司若展現好的長短期營收成長率則具備短期和長期成長動能（當然要避開一次性的賣土地或是資產的收益狀況），股價也會有相對的反應。</p>
+<ol>
+<li><p>營收年增率</p>
+<p> <code>營收年增率 = 近一年營收總和 - 去年同期營收總和 / 去年同期營收總和 * 100%</code></p>
+<p> 營收要和去年同期比較才有意義，而非看月增率，建議至少大於 0 - 5 %</p>
+</li>
+</ol>
+<h2 id="經營團隊與產業分析"><a href="#經營團隊與產業分析" class="headerlink" title="經營團隊與產業分析"></a>經營團隊與產業分析</h2><p>除了上述基本面分析外，一家公司的經營好壞跟其經營團隊和所處產業也有密切相關，一個低調務實打拚的專業經營團隊不論遇到經營亂流或是金融海嘯，呈現短期衰退，長期來看都可以靠著團隊努力客服難關。另外就是產業的狀況，公司是否處在上升性的產業就可以更了解財報背後呈現的原因和真實性。此外，會計師評語也可以讓投資人可以有機會避開地雷公司（正常情況：1. 無保留意見 2. 修正式保留意見）。</p>
+<h1 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h1><p>以上就是簡易的財報分析入門教學，希望大家都可以有能力透過財報分析選對產業、選對公司和選對老闆，不需要再到處打聽路邊名牌，也能更全面性了解公司營運狀況和未來發展方向，為自己的職涯加分。</p>
+<h1 id="延伸閱讀"><a href="#延伸閱讀" class="headerlink" title="延伸閱讀"></a>延伸閱讀</h1><ol>
+<li><a href="http://mops.twse.com.tw/mops/web/index" target="_blank" rel="noopener">公開資訊觀測站</a></li>
+<li><a href="http://www.tse.com.tw/zh/#" target="_blank" rel="noopener">台灣證券交易所</a></li>
+<li><a href="http://www.cmoney.tw/learn/course/0520/topic/1115" target="_blank" rel="noopener">杜邦方程式</a></li>
+</ol>
+
+                </div>
+
+                <br>
+                <div>喜歡我們的文章嗎？歡迎分享按讚給予我們支持和鼓勵！</div>
+                <div>
+                    <div class="fb-like" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                </div>
+                <br>
+                <div>
+                    <div class="fb-page" data-href="https://www.facebook.com/kdchang.cc" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/kdchang.cc" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/kdchang.cc">KD Chang（張凱迪）</a></blockquote></div>
+                </div>
+                <hr>
+                <div>
+                    <h3>Related Posts</h3>
+                    <div>
+                        <ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><h3><a href="/2017/09/10/stay-focus-and-keep-deep-working/" title="在注意力稀缺的時代重新找回深度工作力（Deep Work）" rel="bookmark">在注意力稀缺的時代重新找回深度工作力（Deep Work）</a></h3></div></li></ul>
+                    </div>
+                </div>
+                <!-- Tags -->
+                <h3>Comments</h3>
+                <hr>
+                
+                <!-- disqus start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus end -->
+                
+
+            </div>
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "kdchang-blog";
+    var disqus_identifier = "https://blog.kdchang.cc/2017/06/30/financial-statements-analysis-introduction/";
+    var disqus_url = "https://blog.kdchang.cc/2017/06/30/financial-statements-analysis-introduction/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5728979c6a10856b"></script>
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<!-- <script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script> -->
+<script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+<script>
+   anchors.add('h1, h2, h3');
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/kaidichang">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/kdchang.cc">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/kdchang">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Special thanks <a href="https://www.flickr.com/photos/57265953@N06/" target="_blank">Rafael</a>、<a href="https://www.flickr.com/photos/derek-john-lee/14698093740/in/photolist-ooPzcj-r2kVt-ppV21v-brhFX3-wd3Qsy-cLiKEL-xDR92-28QCtA-29YFZZ-gzuZk-dqbhxt-9FwCBY-q57bEv-bVhZJr-dYxGXn-dxg9g7-8x7gjU-dzjMic-rQhf-9TMgJ3-mEsFjW-qbzd4p-q6cJvc-7zYttk-q2gE5S-bdb4G4-8ifmQN-eivVeg-9ZZFVz-aD6q6r-bnjfWh-qJAn2g-k22Ttf-n9Jhfj-kk4woh-sj43iz-5NYGUn-96wNhi-9ZZFz6-8DJkQf-4wQizw-3bzz8p-9yzTSd-xDQee-68Xwfp-7t5WPx-xDTM5-o5RPYA-kWihhy-7iHDEX" target="_blank">Derek</a>、<a href="https://www.flickr.com/photos/mashleymorgan/" target="_blank">mashleymorgan</a>、<a href="https://www.flickr.com/photos/mustafeez27/" target="_blank">mustafeez27</a>         
+                    and <a href="http://blog.kaijun.rocks" target="_blank">Kaijun</a>
+                    <br> 
+                    Copyright &copy; KD Chang 2021 | 
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="200px" height="20px" src="https://ghbtns.com/github-btn.html?user=kdchang&type=follow&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+<!-- Custom Main JavaScript -->
+<script src="/js/main.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://blog.kdchang.cc/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47712654-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+	<!-- fb -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<a id="scroll-to-top-button">
+		<i class="fas fa-chevron-up"></i>
+	</a>
+	
+</body>
+
+</html>
